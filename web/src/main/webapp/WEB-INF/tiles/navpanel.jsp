@@ -16,13 +16,13 @@
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
             <ul class="nav navbar-nav">
-                <li class="dropdown">
+                <%--<li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><fmt:message
                             key="themes"/><span class="caret"></span></a>
                     <ul class="dropdown-menu" aria-labelledby="themes">
                         <li><a href="../menu/" target="_blank"><fmt:message key="default"/></a></li>
                     </ul>
-                </li>
+                </li>--%>
                 <li>
                     <a href="https://github.com/followhappy/newsline" target="_blank"><fmt:message key="git"/></a>
                 </li>
@@ -30,7 +30,7 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="blog"><fmt:message
                             key="authors"/><span class="caret"></span></a>
                     <ul class="dropdown-menu" aria-labelledby="blog">
-                        <li><a href="https://vk.com/followhappyq" target="_blank"><fmt:message key="happyQ"/></a></li>
+                        <li><a href="<%--https://vk.com/followhappyq--%>https://www.linkedin.com/profile/view?id=406789242" target="_blank"><fmt:message key="happyQ"/></a></li>
                     </ul>
                 </li>
                 <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank"><fmt:message key="wapBootstrap"/></a>
