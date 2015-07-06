@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:security="http://www.springframework.org/schema/security"
+             xsi:schemaLocation="
+      http://www.springframework.org/schema/security
+      http://www.springframework.org/schema/security/spring-security-4.0.xsd
+      http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+
+    <global-method-security secured-annotations="enabled"/>
+
+    <http auto-config="true" use-expressions="true">
+        <intercept-url pattern="/view/admin/**" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/menu/adminController/**" access="hasRole('ROLE_ADMIN')"/>
+        <!--Menu-->
+        <intercept-url pattern="tiles/menu/**" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/menu/add*" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
+        <intercept-url pattern="/menu/save*" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
+        <intercept-url pattern="/delete/*" access="hasRole('ROLE_ADMIN')"/>
+        <access-denied-handler error-page="/error403.jsp"/>
+
+
+        <form-login login-page="/login"
+                    default-target-url="/welcome"
+                    authentication-failure-url="/login?error"
+                    username-parameter="username"
+                    password-parameter="password"
+                    login-processing-url="/auth/login_check"
+                    authentication-success-handler-ref="savedRequestAwareAuthenticationSuccessHandler"/>
+
+
+        <logout logout-success-url="/login?logout" logout-url="/logout" delete-cookies="JSESSIONID"/>
+        <!-- enable csrf protection -->
+        <csrf/>
+
+
+        <remember-me
+                token-validity-seconds="18000"
+                remember-me-parameter="remember-me"
+                data-source-ref="dataSource"/>
+
+
+    </http>
+
+    <authentication-manager>
+        <authentication-provider>
+            <jdbc-user-service data-source-ref="dataSource"
+                               users-by-username-query="SELECT F_EMAIL, F_PASSWORD, TRUE FROM t_user WHERE F_EMAIL=?"
+                               authorities-by-username-query="SELECT F_EMAIL, F_ACCESS FROM t_user WHERE F_EMAIL=?"/>
+        </authentication-provider>
+    </authentication-manager>
+    <!---->
+</beans:beans>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+    <definition name="base.definition" template="/WEB-INF/tiles/layout.jsp">
+        <put-attribute name="head" value="/WEB-INF/tiles/head.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/tiles/header.jsp"/>
+        <put-attribute name="navpanel" value="/WEB-INF/tiles/navpanel.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/tiles/menu/menu.jsp"/>
+        <put-attribute name="content" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"/>
+    </definition>
+
+
+    <definition name="menu" extends="base.definition">
+        <put-attribute name="content" value="/WEB-INF/view/menu.jsp"/>
+    </definition>
+    <definition name="add" extends="base.definition">
+        <put-attribute name="content" value="/WEB-INF/view/add.jsp"/>
+    </definition>
+    <definition name="post" extends="base.definition">
+        <put-attribute name="content" value="/WEB-INF/view/post.jsp"/>
+    </definition>
+
+    <definition name="addCategory" extends="base.definition">
+        <put-attribute name="content" value="/WEB-INF/view/admin/controller/category.jsp"/>
+    </definition>
+    <definition name="adminController" extends="base.definition">
+        <put-attribute name="content" value="/WEB-INF/view/admin/adminController.jsp"/>
+    </definition>
+    <definition name="users" extends="base.definition">
+        <put-attribute name="content" value="/WEB-INF/view/admin/controller/users.jsp"/>
+    </definition>
+    <definition name="banUsers" extends="base.definition">
+        <put-attribute name="content" value="/WEB-INF/view/admin/controller/banUsers.jsp"/>
+    </definition>
+
+    <definition name="saveCategory" extends="base.definition">
+        <put-attribute name="content" value="/WEB-INF/view/admin/saveCategory.jsp"/>
+    </definition>
+    <definition name="login" extends="base.definition">
+        <put-attribute name="content" value="/WEB-INF/view/login.jsp"/>
+    </definition>
+    <definition name="addUser" extends="base.definition">
+        <put-attribute name="content" value="/WEB-INF/view/reg.jsp"/>
+    </definition>
+    <definition name="saveUser" extends="base.definition">
+        <put-attribute name="content" value="/WEB-INF/view/saveUser.jsp"/>
+    </definition>
+    <definition name="save" extends="base.definition">
+        <put-attribute name="content" value="/WEB-INF/view/save.jsp"/>
+    </definition>
+
+</tiles-definitions>
