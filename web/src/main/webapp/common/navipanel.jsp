@@ -1,10 +1,11 @@
 <%--
+&lt;%&ndash;
   Created by IntelliJ IDEA.
   User: ragexe
   Date: 06.06.2015
   Time: 18:53
   To change this template use File | Settings | File Templates.
---%>
+&ndash;%&gt;
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
@@ -62,19 +63,19 @@
             <li><a href="https://vk.com/followhappyq">Ivan aka happyQ</a></li>
           </ul>
         </li>
-        <%--<li class="dropdown">--%>
-        <%--<a class="dropdown-toggle" by.newsline.data-toggle="dropdown" href="#" id="download">Download <span class="caret"></span></a>--%>
-        <%--<ul class="dropdown-menu" aria-labelledby="download">--%>
-        <%--<li><a href="./bootstrap.min.css">bootstrap.min.css</a></li>--%>
-        <%--<li><a href="./bootstrap.css">bootstrap.css</a></li>--%>
-        <%--<li class="divider"></li>--%>
-        <%--<li><a href="./variables.less">variables.less</a></li>--%>
-        <%--<li><a href="./bootswatch.less">bootswatch.less</a></li>--%>
-        <%--<li class="divider"></li>--%>
-        <%--<li><a href="./_variables.scss">_variables.scss</a></li>--%>
-        <%--<li><a href="./_bootswatch.scss">_bootswatch.scss</a></li>--%>
-        <%--</ul>--%>
-        <%--</li>--%>
+        &lt;%&ndash;<li class="dropdown">&ndash;%&gt;
+        &lt;%&ndash;<a class="dropdown-toggle" by.newsline.data-toggle="dropdown" href="#" id="download">Download <span class="caret"></span></a>&ndash;%&gt;
+        &lt;%&ndash;<ul class="dropdown-menu" aria-labelledby="download">&ndash;%&gt;
+        &lt;%&ndash;<li><a href="./bootstrap.min.css">bootstrap.min.css</a></li>&ndash;%&gt;
+        &lt;%&ndash;<li><a href="./bootstrap.css">bootstrap.css</a></li>&ndash;%&gt;
+        &lt;%&ndash;<li class="divider"></li>&ndash;%&gt;
+        &lt;%&ndash;<li><a href="./variables.less">variables.less</a></li>&ndash;%&gt;
+        &lt;%&ndash;<li><a href="./bootswatch.less">bootswatch.less</a></li>&ndash;%&gt;
+        &lt;%&ndash;<li class="divider"></li>&ndash;%&gt;
+        &lt;%&ndash;<li><a href="./_variables.scss">_variables.scss</a></li>&ndash;%&gt;
+        &lt;%&ndash;<li><a href="./_bootswatch.scss">_bootswatch.scss</a></li>&ndash;%&gt;
+        &lt;%&ndash;</ul>&ndash;%&gt;
+        &lt;%&ndash;</li>&ndash;%&gt;
         <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
       </ul>
 
@@ -103,8 +104,8 @@
                     <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><a href="login.jsp" class="bg-primary">Войти</a></li>
-                        <%--<li><a href="#">Another action</a></li>--%>
-                        <%--<li><a href="#">Something else here</a></li>--%>
+                        &lt;%&ndash;<li><a href="#">Another action</a></li>&ndash;%&gt;
+                        &lt;%&ndash;<li><a href="#">Something else here</a></li>&ndash;%&gt;
                       <li class="divider"></li>
                       <li><a href="reg.jsp">Регистрация</a></li>
                     </ul>
@@ -116,10 +117,10 @@
                       <li><a href="#">Мои новости</a></li>
                       <li><a href="#">Профиль</a></li>
                       <li class="divider"></li>
-                      <%--<core:if test="${user.role == 1}">--%>
+                      &lt;%&ndash;<core:if test="${user.role == 1}">&ndash;%&gt;
                         <li><a href="admpanel.jsp">Админка</a></li>
                         <li class="divider"></li>
-                      <%--</core:if>--%>
+                      &lt;%&ndash;</core:if>&ndash;%&gt;
                       <li><a href="<core:url value="j_spring_security_logout"/>" class="bg-danger">Выйти</a></li>
                     </ul>
                   </core:otherwise>
@@ -134,3 +135,4 @@
 </div>
 </body>
 </html>
+--%>

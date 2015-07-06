@@ -24,13 +24,12 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="https://github.com/ragexe/newsline/" target="_blank"><fmt:message key="git"/></a>
+                    <a href="https://github.com/followhappy/newsline" target="_blank"><fmt:message key="git"/></a>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="blog"><fmt:message
                             key="authors"/><span class="caret"></span></a>
                     <ul class="dropdown-menu" aria-labelledby="blog">
-                        <li><a href="https://vk.com/ragexe" target="_blank"><fmt:message key="ragexe"/></a></li>
                         <li><a href="https://vk.com/followhappyq" target="_blank"><fmt:message key="happyQ"/></a></li>
                     </ul>
                 </li>
